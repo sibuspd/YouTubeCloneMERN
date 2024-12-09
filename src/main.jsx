@@ -2,7 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import HomePage from './components/Homepage/homePage.jsx';
+import Video from './pages/Video/video.jsx';
+import Home from './pages/Home/home.jsx';
 
 //Router Configuration 
 
@@ -12,7 +13,11 @@ const appRouter = createBrowserRouter([{
   children: [
     {
       path: '/',
-      element: <HomePage/>
+      element: <Home/>
+    },
+    {
+      path: '/video',
+      element: <Video/>
     }
   ]
 }]);
