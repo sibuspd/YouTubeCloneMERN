@@ -6,8 +6,17 @@ import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import PersonIcon from '@mui/icons-material/Person';
+import { useState } from "react";
 
 const Navbar = () => {
+
+    const [DP, setDP] = useState("https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg");
+    const [navbarModal, setNavbarModal] = useState(false);
+    
+    const handleClickModal =() => {
+        setNavbarModal(prev => !prev);
+    }
+
     return (
         <div className="navbar">
 
@@ -38,6 +47,21 @@ const Navbar = () => {
             <div className="navbar-right">
                 <VideoCallIcon sx={{fontSize:"30px", cursor: "pointer", color: "whitesmoke"}}/>
                 <NotificationsIcon sx={{fontSize:"30px", cursor: "pointer", color: "whitesmoke"}}/>
+                <img  src={DP} className="navbar-right-logo" onClick={handleClickModal}/>
+                
+                {  navbarModal &&               
+                    <div className="navbar-modal">
+                        <div className="navbar-modal-option">
+                            Profile
+                        </div>
+                        <div className="navbar-modal-option">
+                            Logout
+                        </div>
+                        <div className="navbar-modal-option">
+                            Login
+                        </div>
+                </div>
+                }
             </div>
 
         </div>
@@ -45,3 +69,5 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+// https://srcwap.com/wp-content/uploads/2022/08/abstract-user-flat-4.png

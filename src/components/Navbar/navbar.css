@@ -114,3 +114,26 @@
     align-items: center;
     position: relative;
 }
+
+.navbar-right-logo{
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.navbar-modal{
+    position: absolute;
+    top: 140%;
+    width: 100%;
+    z-index: 20;
+    color: whitesmoke;
+}
+
+.navbar-modal-option{
+    background-color: rgb(85, 85, 85);
+    padding: 10px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb( 34, 33, 33);
+    }
+}
