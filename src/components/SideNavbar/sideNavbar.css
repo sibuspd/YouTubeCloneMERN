@@ -1,3 +1,7 @@
+.home-sideNavbarHide{
+    display: none;
+}
+
 .home-sideNavbar{
     display: flex;
     flex-direction: column;
@@ -12,6 +16,10 @@
     padding: 14px;
     background-color: rgb(10, 48, 63);
     color: whitesmoke;
+}
+
+.home-sideNavbar::-webkit-scrollbar{
+    width: 0px; /* Hiding the scroll bar  */
 }
 
 .home_sideNavbarTop{

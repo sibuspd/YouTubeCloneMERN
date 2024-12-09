@@ -8,7 +8,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import PersonIcon from '@mui/icons-material/Person';
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ( {sideNavbarOnClick, sideNavbar}) => {
 
     const [DP, setDP] = useState("https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg");
     const [navbarModal, setNavbarModal] = useState(false);
@@ -17,11 +17,16 @@ const Navbar = () => {
         setNavbarModal(prev => !prev);
     }
 
+    const sideNavbarPass = () => {
+        sideNavbarOnClick(!sideNavbar);
+        console.log(!sideNavbar);
+    }
+
     return (
         <div className="navbar">
 
             <div className="navbar-left"> {/*Only Humburger icon and YouTube logo*/}
-                 <div className="navbarHamburger">
+                 <div className="navbarHamburger" onClick={sideNavbarPass}>
                     <MenuIcon sx={{color: "white"}}/>
                  </div>
                  <div className="navbar_youtubeImg">

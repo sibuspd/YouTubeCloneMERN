@@ -11,9 +11,9 @@ import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import ContentCutIcon from "@mui/icons-material/ContentCut";
 
-const SideNavbar = () => {
+const SideNavbar = ( {sideNavbar} ) => {
   return (
-    <div className="home-sideNavbar">
+    <div className={sideNavbar?"home-sideNavbar":"home-sideNavbarHide"}>
       <div className="home_sideNavbarTop">
         {/* Top - 1st option  */}
         <div className="home_sideNavbarTopOption">
@@ -85,7 +85,7 @@ const SideNavbar = () => {
 
       <div className="home_sideNavbarMiddle">     {/*Reusing same class styles */}
     
-        {/* 1st Bottom Option*/}
+        {/* 1st Bottom Option - Header */}
         <div className="home_sideNavbarTopOption">
           <div className="home_sideNavbarTopOptionTitleHeader">
             Subscriptions
@@ -105,6 +105,31 @@ const SideNavbar = () => {
             <img src="https://yt3.googleusercontent.com/ytc/AIdro_kI8EMkz3qlMMD5zmT0geuWb41lUpE0sw-O7g8pgg4WyQ=s176-c-k-c0x00ffffff-no-rj-mo" className="home_sideNavbar_ImgLogo" />
             <div className="home_sideNavbarTopOptionTitle">
               Nerd's Lessons
+            </div>
+          </div>
+
+          {/* 4th Bottom Option*/}
+          <div className="home_sideNavbarTopOption">
+            <img src="https://yt3.googleusercontent.com/LFiy0mdLB444rDFuClMDhv86pzjDgoLFLhlciT1wQPMMwAjdcD0JacPODMk4Y7cLl9EzFS3rXA=s160-c-k-c0x00ffffff-no-rj" className="home_sideNavbar_ImgLogo" />
+            <div className="home_sideNavbarTopOptionTitle">
+              Errichto Algorithms
+            </div>
+          </div>
+
+          {/* 5th Bottom Option*/}
+          <div className="home_sideNavbarTopOption">
+            <img src="https://yt3.googleusercontent.com/eTG23JUCOlcy0L8VcLBJ-hN3VZfazLh2q23TOUjHh549AenWadJ3cNVUwGY44QWxo1_0z-OC_Q=s160-c-k-c0x00ffffff-no-rj" className="home_sideNavbar_ImgLogo"/>
+            <div className="home_sideNavbarTopOptionTitle">
+            KnowledgeGATE by Sanchit Sir
+            </div>
+          </div>
+
+          {/* 6th Bottom Option*/}
+          <div className="home_sideNavbarTopOption">
+            <img src="https://yt3.googleusercontent.com/ISa-qobiRieUf7gGOMzihMJAcxZ-y_ZuiCUDp063CF0SVSkAQ_tFQ6gfkTG-hg2PtbRwFzXgOQ=s176-c-k-c0x00ffffff-no-rj-mo" className="home_sideNavbar_ImgLogo"/> 
+            <div className="home_sideNavbarTopOptionTitle">
+            Thriving Technologist
+
             </div>
           </div>
            
