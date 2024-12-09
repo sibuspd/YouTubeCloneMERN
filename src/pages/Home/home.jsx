@@ -5,8 +5,8 @@ import "./home.css"
 const Home = ( { sideNavbar }) => {
   return (
     <div className="home">
-        <SideNavbar sideNavbar={sideNavbar} />
-        <HomePage />
+        <SideNavbar sideNavbar={sideNavbar} /> {/**Passing the value for toggling SideNavBar */}
+        <HomePage sideNavbar={sideNavbar}/> {/**Passing value for homepage vw adjustment */}
     </div>
   )
 }

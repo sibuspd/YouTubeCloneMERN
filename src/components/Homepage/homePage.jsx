@@ -1,6 +1,6 @@
 import "./homePage.css";
 
-const HomePage = () => {
+const HomePage = ({sideNavbar}) => {
   //HOMEPAGE = FilterOptions + Video Thumbnails
 
   const filters = [
@@ -21,13 +21,32 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="homepage">
+    <div className={sideNavbar?"homepage":"fullHomePage"}>
+        {/* The Category Filters*/ }
       <div className="homepage_options">
         {filters.map((category, index) => {
           return <div className="homepage_option" key={index}>{category}</div>;
         })}
-        <div className="content_below_filters"> skyfall </div>
+      </div> 
+      {/* The Video Thumbnails Section*/ }
+      <div className="home_mainPage">
+        <div className="youtube_Video"> {/* Single thumbnail*/ } 
+            <div className="youtube_thumbnailBox">
+                <img src="https://i.ytimg.com/vi/UN-F5ZWwwJc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARTiM0ALKqtyvQkEpLUL1KEUUQAg" className="youtube_thumbnailPic" alt="Thumbnail"/>
+                <div className="youtube_timingThumbnail">
+                    28:05
+                </div>
+            </div>
+            <div className="youtubeTitleBox"> {/* Consists username, dp, video title and views*/ }
+                <div className="youtubeTitleBoxProfile">
+                    <img src="https://yt3.ggpht.com/8jshuX4Pme6Q_h_HWwR1EMz7nAoZKYayugfh055Y1jxx0Ne5BJHPaQBfnRUZ-TWYbqaAhD4nLRY=s88-c-k-c0x00ffffff-no-rj" alt="profile" className="youtube_thumbnail_Profile" />
+                </div>
+            </div>
+        </div>
+        
       </div>
+
+
     </div>
   );
 };
