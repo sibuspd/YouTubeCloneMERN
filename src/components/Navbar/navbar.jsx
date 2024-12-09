@@ -49,7 +49,7 @@ const Navbar = () => {
                 <NotificationsIcon sx={{fontSize:"30px", cursor: "pointer", color: "whitesmoke"}}/>
                 <img  src={DP} className="navbar-right-logo" onClick={handleClickModal}/>
                 
-                {  navbarModal &&               
+                {  navbarModal &&               // Conditional Rendering
                     <div className="navbar-modal">
                         <div className="navbar-modal-option">
                             Profile

@@ -9,6 +9,8 @@
     width: 100%;
     justify-content: space-between;
     top: 0;
+    left: 0;
+    position: absolute;
     background-color: rgb(10, 48, 63);
     z-index: 10;
 }
