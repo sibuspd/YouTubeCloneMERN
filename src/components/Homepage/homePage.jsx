@@ -29,7 +29,7 @@ const HomePage = ({sideNavbar}) => {
         })}
       </div> 
       {/* The Video Thumbnails Section*/ }
-      <div className="home_mainPage">
+      <div className={sideNavbar?"home_mainPage":"fullHome_mainPage"}>
         <div className="youtube_Video"> {/* Single thumbnail*/ } 
             <div className="youtube_thumbnailBox">
                 <img src="https://i.ytimg.com/vi/UN-F5ZWwwJc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARTiM0ALKqtyvQkEpLUL1KEUUQAg" className="youtube_thumbnailPic" alt="Thumbnail"/>

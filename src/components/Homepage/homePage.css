@@ -16,6 +16,7 @@
     overflow-x: hidden;
     flex: 1;
     min-height: 100vh;
+    min-width: 100vw;
     position: relative;
     padding-top: 56px;
 }
@@ -63,6 +64,15 @@
     box-sizing: border-box;
     gap: 10px;
     grid-template-columns: 320px 320px 320px;
+    padding: 90px 0 20px 0;
+    background-color: skyblue;
+}
+
+.fullHome_mainPage{
+    display: grid;
+    box-sizing: border-box;
+    gap: 10px;
+    grid-template-columns: 291px 291px 291px 291px;
     padding: 90px 0 20px 0;
     background-color: skyblue;
 }
