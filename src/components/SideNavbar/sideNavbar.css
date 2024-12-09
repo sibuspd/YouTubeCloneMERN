@@ -13,3 +13,34 @@
     background-color: rgb(10, 48, 63);
     color: whitesmoke;
 }
+
+.home_sideNavbarTop{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(86, 85, 85) ;
+    padding-bottom: 10px;
+}
+
+.home_sideNavbarTopOption{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 9px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(35, 35, 35);
+    }
+}
+
+.home_sideNavbarTopOptionTitle{
+    font-size: 16px;
+    font-weight: 450;
+}
+
+.home_sideNavbarMiddle{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(86, 85, 85);
+    padding: 10px 0;
+}
