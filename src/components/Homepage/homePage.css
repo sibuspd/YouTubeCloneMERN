@@ -65,7 +65,7 @@
     gap: 10px;
     grid-template-columns: 320px 320px 320px;
     padding: 90px 0 20px 0;
-    background-color: skyblue;
+    /* background-color: skyblue; */
 }
 
 .fullHome_mainPage{
@@ -74,7 +74,7 @@
     gap: 10px;
     grid-template-columns: 291px 291px 291px 291px;
     padding: 90px 0 20px 0;
-    background-color: skyblue;
+    /* background-color: skyblue; */
 }
 
 .youtube_Video{
