@@ -6,12 +6,14 @@ import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = ( {sideNavbarOnClick, sideNavbar}) => {
 
     const [DP, setDP] = useState("https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg");
     const [navbarModal, setNavbarModal] = useState(false);
+
+    const navigate = useNavigate();
     
     const handleClickModal =() => {
         setNavbarModal(prev => !prev);
@@ -20,6 +22,11 @@ const Navbar = ( {sideNavbarOnClick, sideNavbar}) => {
     const sideNavbarPass = () => {
         sideNavbarOnClick(!sideNavbar);
         console.log(!sideNavbar);
+    }
+
+    const handleProfile = () => { // Navigate to a different url
+        navigate('/user/:id');
+        setNavbarModal(false);
     }
 
     return (
@@ -58,7 +65,7 @@ const Navbar = ( {sideNavbarOnClick, sideNavbar}) => {
                 
                 {  navbarModal &&               // Conditional Rendering
                     <div className="navbar-modal">
-                        <div className="navbar-modal-option">
+                        <div className="navbar-modal-option" onClick={handleProfile}>
                             Profile
                         </div>
                         <div className="navbar-modal-option">
