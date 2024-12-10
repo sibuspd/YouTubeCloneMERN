@@ -7,11 +7,13 @@ import VideoCallIcon from '@mui/icons-material/VideoCall';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Login from "../Login/login";
 
 const Navbar = ( {sideNavbarOnClick, sideNavbar}) => {
 
     const [DP, setDP] = useState("https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg");
     const [navbarModal, setNavbarModal] = useState(false);
+    const [login, setLogin] = useState(false);
 
     const navigate = useNavigate();
     
@@ -27,6 +29,20 @@ const Navbar = ( {sideNavbarOnClick, sideNavbar}) => {
     const handleProfile = () => { // Navigate to a different url
         navigate('/user/:id');
         setNavbarModal(false);
+    }
+
+    const setLoginModal=() =>{
+        setLogin(false);
+    }
+
+    const onClickOfPopUpOption = (button) =>{ // Argument passed as 'login or 'logout'
+        setNavbarModal(false);
+        
+        if (button === "login"){
+            setLogin(true);
+        } else{
+
+        }
     }
 
     return (
@@ -70,15 +86,19 @@ const Navbar = ( {sideNavbarOnClick, sideNavbar}) => {
                         <div className="navbar-modal-option" onClick={handleProfile}>
                             Profile
                         </div>
-                        <div className="navbar-modal-option">
+                        <div className="navbar-modal-option" onClick={()=>onClickOfPopUpOption("logout")}>
                             Logout
                         </div>
-                        <div className="navbar-modal-option">
+                        <div className="navbar-modal-option" onClick={()=>onClickOfPopUpOption("login")}>
                             Login
                         </div>
                 </div>
                 }
             </div>
+
+            {
+              login && <Login setLoginModal= {setLoginModal}/>
+            }
 
         </div>
     )
