@@ -11,9 +11,9 @@ import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import ContentCutIcon from "@mui/icons-material/ContentCut";
 
-const SideNavbar = ( {sideNavbar} ) => {
+const SideNavbar = ( { sideNavbar } ) => {
   return (
-    <div className={sideNavbar?"home-sideNavbar":"home-sideNavbarHide"}>
+    <div className={sideNavbar ? "home-sideNavbar":"home-sideNavbarHide"}>
       <div className="home_sideNavbarTop">
         {/* Top - 1st option  */}
         <div className="home_sideNavbarTopOption">

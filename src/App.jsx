@@ -9,7 +9,7 @@ function App() {
   const [sideNavbar, setSideNavbar] = useState(true);
   
   const location = useLocation();
-  const isHomePage = location.pathname === "/"; // React Hook
+  const isVideoPage = /^\/watch\/\d+/.test(location.pathname);
 
   const sideNavbarOnClick = (value) => {
     setSideNavbar(value); // Set to TRUE OR FALSE
@@ -18,10 +18,10 @@ function App() {
   return (
     <div className='App'>
         <Navbar sideNavbarOnClick= {sideNavbarOnClick} sideNavbar={sideNavbar}/>
-        <SideNavbar sideNavbar={isHomePage?sideNavbar:false}/> 
+        {!isVideoPage && <SideNavbar sideNavbar={sideNavbar}/>}
         <Outlet context={{ sideNavbar, sideNavbarOnClick}}/>
     </div>
-  )
+  ) 
 }
 
 export default App

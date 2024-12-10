@@ -19,6 +19,18 @@
     transition: width 0.3s; 
 }
 
+.home-sideNavbarOverlay { 
+    width: 250px; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    background-color: #202020; 
+    overflow-x: hidden; 
+    z-index: -20; /* Ensure it's above other content */
+    transition: width 0.3s; opacity: 0.9; /* Slight transparency for overlay effect */ 
+}
+
 .home-sideNavbar::-webkit-scrollbar{
     width: 0px; /* Hiding the scroll bar  */
 }

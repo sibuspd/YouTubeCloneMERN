@@ -4,6 +4,7 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Video from './pages/Video/video.jsx';
 import Home from './pages/Home/home.jsx';
+import Profile from './pages/Profile/profile.jsx';
 
 //Router Configuration 
 
@@ -18,6 +19,10 @@ const appRouter = createBrowserRouter([{
     {
       path: '/watch/:id',
       element: <Video/>
+    },
+    {
+      path: '/user/:id',
+      element: <Profile/>
     }
   ]
 }]);
