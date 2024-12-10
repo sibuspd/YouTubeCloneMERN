@@ -1,5 +1,7 @@
 import "./video.css"
 import { useOutletContext } from 'react-router-dom';
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
+import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 const Video = () => {
 
     const { sideNavbar, sideNavbarOnClick } = useOutletContext(); 
@@ -36,7 +38,21 @@ const Video = () => {
                             Subscribe
                         </div>
                     </div>
-                    
+
+                    <div className="youtube_video_likeBlock">
+                        <div className="youtube_video_likeBlock_Like">
+                            <ThumbUpOffAltIcon/>
+                            <div className="youtube_video_likeBlock_LikeCount">
+                                {32}
+                            </div>
+                        </div>
+
+                        <div className="youtubeVideoDivider"></div>
+
+                        <div className="youtube_video_likeBlock_Like">
+                            <ThumbDownOffAltIcon/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
