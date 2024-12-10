@@ -1,0 +1,51 @@
+.profile{
+    display: flex;
+    width: 100%;
+    padding: 10px 13px 0 13px;
+    box-sizing: border-box;
+}
+
+.profile_page{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    flex: 1;
+    margin-left: 270px;
+    margin-top: 56px;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_top_section{
+    width: 100%;
+    display: flex;
+    padding: 0 0 20px 0;
+}
+
+.profile_top_section_profile{
+    width: 15%; 
+}
+
+.profile_top_section_img{
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;  
+}
+
+.profile_top_section_About{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 0 10px;
+    width: 85%;
+}
+
+.profile_top_section_About_Name{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.profile_top_section_info{
+    font-size: 16px;
+    color: rgb(69, 67, 67);
+}
