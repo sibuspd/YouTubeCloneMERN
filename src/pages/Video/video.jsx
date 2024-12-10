@@ -21,6 +21,7 @@ const Video = () => {
                 <div className="video_uTubeTitle">
                     {"Machine Learning full course"}
                 </div>
+
                 <div className="youtube_video_ProfileBlock">
                     <div className="youtube_video_ProfileBlock_left">
                         <div className="youtube_video_ProfileBlock_left_img">
@@ -51,6 +52,36 @@ const Video = () => {
 
                         <div className="youtube_video_likeBlock_Like">
                             <ThumbDownOffAltIcon/>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="youtube_video_About">
+                    <div>2024-09-30</div>
+                    <div>Video desciption bla bla bla</div>
+                </div>
+
+                <div className="youtubeCommentSection">
+                    <div className="youtubeCommentSectionTitle">2 Comments</div>
+                    <div className="youtubeSelfComment">
+                        <img className="video_youtubeSelfCommentProfile" src="https://yt3.googleusercontent.com/ytc/AIdro_mvtjOo2sSb0doCb8jiVbrm3QrlfJAWTXtK6hgizkze_g=s160-c-k-c0x00ffffff-no-rj" />
+                        <div className="addAComment">
+                            <input type="text" className="addACommentInput" placeholder="Add a comment" />
+                            <div className="cancelSubmitComment">
+                                <div className="cancelComment">Cancel</div>
+                                <div className="cancelComment">Comment</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="youtubeOtherComments">
+                        <div className="youtubeSelfComment"> {/**Inheriting same style as above */}
+                            <img className="video_youtubeSelfCommentProfile" src="https://yt3.googleusercontent.com/ytc/AIdro_mvtjOo2sSb0doCb8jiVbrm3QrlfJAWTXtK6hgizkze_g=s160-c-k-c0x00ffffff-no-rj" />
+                            <div className="others_commentSection">
+                                <div className="other_commentSectionHeader">
+                                    <div className="channelName_comment">Username</div>
+                                    <div className="commentTimingOther">2024-09-30</div>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>

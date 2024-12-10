@@ -111,9 +111,81 @@
     border: 1px solid;
 }
 
+.youtube_video_About{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #a5a5a538;
+    width: 100%;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    gap: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
 
+.youtubeCommentSection{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
 
+.youtubeCommentSectionTitle{
+    font-size: 20px;
+    font-weight: 500;
+}
 
+.youtubeSelfComment{
+    display: flex;
+    margin-top: 10px;
+    gap: 10px ;
+}
+
+.video_youtubeSelfCommentProfile{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.addAComment{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.addACommentInput{
+    width: 100%;
+    height: 35px;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid gray;
+    &:focus{
+        outline: none;
+    }
+    &::placeholder{
+        font-size: 16px;
+    }
+}
+
+.cancelSubmitComment{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.cancelComment{
+    padding: 8px 16px;
+    border-radius: 18px;
+    border: 1px solid;
+    cursor: pointer;
+    &:hover{
+        background-color: black;
+        color: whitesmoke;
+    }
+}
 
 .videoSuggestions{
     width: 100%;
@@ -122,4 +194,30 @@
     gap: 15px;
     display: flex;
     flex-direction: column;
+}
+
+.youtubeOtherComments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.others_commentSection{
+    display: flex;
+    flex-direction: column;
+}
+
+.other_commentSectionHeader{
+    display: flex;
+    gap: 10px;
+}
+
+.channelName_comment{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.commentTimingOther{
+    font-size: 14px;
+    color: #504d4dc7;
 }
