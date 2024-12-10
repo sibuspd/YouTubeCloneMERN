@@ -1,10 +1,18 @@
+import { useOutletContext } from 'react-router-dom';
+import { useEffect } from 'react';
 import "./video.css"
-import { Link, useOutletContext } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 const Video = () => {
 
-    const { sideNavbar, sideNavbarOnClick } = useOutletContext(); 
+    const { sideNavbar, sideNavbarOnClick } = useOutletContext();
+
+    useEffect(() => { 
+        if (sideNavbar) { 
+            sideNavbarOnClick(false);
+        }
+    }, [sideNavbar, sideNavbarOnClick]);
 
   return (
     <div className="video">

@@ -1,11 +1,14 @@
+import { useOutletContext } from "react-router-dom"
 import { Link } from "react-router-dom";
 import "./profile.css"
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 const Profile = () => {
+
+    const { sideNavbar } = useOutletContext(); // Get the state of 'sideNavbar'
   return (
     <div className="profile">
-        <div className="profile_page">
+        <div className={sideNavbar?"profile_page":"profile_page_inactive"}>
 
             <div className="profile_top_section">
                 <div className="profile_top_section_profile">
