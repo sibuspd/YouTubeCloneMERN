@@ -1,4 +1,4 @@
-const Comment = require('../Modals/comment');
+const Comment = require('../Modals/comment.cjs');
 
 // Handling Comment Collection
 

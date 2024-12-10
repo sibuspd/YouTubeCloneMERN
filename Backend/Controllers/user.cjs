@@ -1,7 +1,7 @@
 // USER Authentication Section
 
 
-const User = require('../Modals/user');
+const User = require('../Modals/user.cjs');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 

@@ -1,5 +1,7 @@
+//Authentication Middleware function
+
 const jwt = require('jsonwebtoken');
-const User = require('../Modals/user');
+const User = require('../Modals/user.cjs');
 
 
 const auth = async (req, res, next) =>{

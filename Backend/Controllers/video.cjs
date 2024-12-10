@@ -1,4 +1,4 @@
-const Video = require('../Modals/video');
+const Video = require('../Modals/video.cjs');
 
 // Fetching of Video Data Section
 exports.uploadVideo = async (req,res)=>{
