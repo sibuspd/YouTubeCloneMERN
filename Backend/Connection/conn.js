@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-// youtubeBackend
+// Database Connection
 
 mongoose
   .connect('mongodb://localhost:27017/youtubeBackend')
