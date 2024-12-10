@@ -1,6 +1,6 @@
 const Video = require('../Modals/video');
 
-
+// Fetching of Video Data Section
 exports.uploadVideo = async (req,res)=>{
     try{
         const { title, description, videoLink, videoType,thumbnail }  = req.body;
