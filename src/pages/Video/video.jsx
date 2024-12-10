@@ -1,10 +1,12 @@
 import { useOutletContext } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import "./video.css"
 import { Link } from 'react-router-dom';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 const Video = () => {
+
+    const [message, setMessage] = useState("");
 
     const { sideNavbar, sideNavbarOnClick } = useOutletContext();
 
@@ -74,7 +76,7 @@ const Video = () => {
                     <div className="youtubeSelfComment">
                         <img className="video_youtubeSelfCommentProfile" src="https://yt3.googleusercontent.com/ytc/AIdro_mvtjOo2sSb0doCb8jiVbrm3QrlfJAWTXtK6hgizkze_g=s160-c-k-c0x00ffffff-no-rj" />
                         <div className="addAComment">
-                            <input type="text" className="addACommentInput" placeholder="Add a comment" />
+                            <input type="text" className="addACommentInput" placeholder="Add a comment" value={message} onChange={(e)=>{setMessage(e.target.value)}}/>
                             <div className="cancelSubmitComment">
                                 <div className="cancelComment">Cancel</div>
                                 <div className="cancelComment">Comment</div>
