@@ -1,6 +1,6 @@
 const Comment = require('../Modals/comment');
 
-
+// Handling Comment Collection
 
 exports.addComment = async(req,res)=>{
     try{
