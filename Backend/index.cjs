@@ -15,9 +15,9 @@ app.use(express.json());
 app.use(cookieParser());
 require('./Connection/conn');
 
-const AuthRoutes = require('./Routes/user');
-const VideoRoutes = require('./Routes/video');
-const CommentRoutes = require('./Routes/comment');
+const AuthRoutes = require('./Routes/user.cjs');
+const VideoRoutes = require('./Routes/video.cjs');
+const CommentRoutes = require('./Routes/comment.cjs');
 
 app.use('/auth',AuthRoutes);
 app.use('/api',VideoRoutes);
