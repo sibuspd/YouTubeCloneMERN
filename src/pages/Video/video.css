@@ -187,14 +187,6 @@
     }
 }
 
-.videoSuggestions{
-    width: 100%;
-    max-width: 406px;
-    padding: 10px 15px;
-    gap: 15px;
-    display: flex;
-    flex-direction: column;
-}
 
 .youtubeOtherComments{
     display: flex;
@@ -220,4 +212,52 @@
 .commentTimingOther{
     font-size: 14px;
     color: #504d4dc7;
+}
+
+.otherCommentSectionComment{
+    margin-top: 10px;
+}
+
+
+/* ----------Video Page Right Segment */
+.videoSuggestions{
+    width: 100%;
+    max-width: 406px;
+    padding: 10px 15px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoSuggestionsBlock{
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.video_suggestion_thumbnail{
+    width: 170px;
+    height: 94px;
+    border-radius: 8px;
+}
+
+.video_suggestion_thumbnail_img{
+    width: inherit;
+}
+
+.video_suggestions_About{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.video_suggestions_About_title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.video_suggestions_About_Profile{
+    color: #2b2a2ad2;
+    font-size: 13px;
 }

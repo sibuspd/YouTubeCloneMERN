@@ -81,6 +81,33 @@ const Video = () => {
                                     <div className="channelName_comment">Username</div>
                                     <div className="commentTimingOther">2024-09-30</div>
                                 </div>
+                                <div className="otherCommentSectionComment">
+                                    Cool web app project
+                                </div>
+                            </div> 
+                        </div>
+                        <div className="youtubeSelfComment"> {/**Inheriting same style as above */}
+                            <img className="video_youtubeSelfCommentProfile" src="https://yt3.googleusercontent.com/ytc/AIdro_mvtjOo2sSb0doCb8jiVbrm3QrlfJAWTXtK6hgizkze_g=s160-c-k-c0x00ffffff-no-rj" />
+                            <div className="others_commentSection">
+                                <div className="other_commentSectionHeader">
+                                    <div className="channelName_comment">Username</div>
+                                    <div className="commentTimingOther">2024-09-30</div>
+                                </div>
+                                <div className="otherCommentSectionComment">
+                                    Cool web app project
+                                </div>
+                            </div> 
+                        </div>
+                        <div className="youtubeSelfComment"> {/**Inheriting same style as above */}
+                            <img className="video_youtubeSelfCommentProfile" src="https://yt3.googleusercontent.com/ytc/AIdro_mvtjOo2sSb0doCb8jiVbrm3QrlfJAWTXtK6hgizkze_g=s160-c-k-c0x00ffffff-no-rj" />
+                            <div className="others_commentSection">
+                                <div className="other_commentSectionHeader">
+                                    <div className="channelName_comment">Username</div>
+                                    <div className="commentTimingOther">2024-09-30</div>
+                                </div>
+                                <div className="otherCommentSectionComment">
+                                    Cool web app project
+                                </div>
                             </div> 
                         </div>
                     </div>
@@ -89,7 +116,54 @@ const Video = () => {
         </div>
 
         <div className="videoSuggestions">
-            Video Suggestions
+            <div className="videoSuggestionsBlock">
+                <div className="video_suggestion_thumbnail">
+                    <img src="https://tpc.googlesyndication.com/simgad/11580188162865580943" className="video_suggestion_thumbnail_img" />
+                </div>
+                <div className="video_suggestions_About">
+                    <div className="video_suggestions_About_title">
+                    Embedded software system #Andruino #Raspberry Pi 
+                    </div>
+                    <div className="video_suggestions_About_Profile">
+                        Embedded Systems
+                    </div>
+                    <div className="video_suggestions_About_Profile">
+                        136 views. 1 day ago
+                    </div>
+                </div>
+            </div>
+            <div className="videoSuggestionsBlock">
+                <div className="video_suggestion_thumbnail">
+                    <img src="https://tpc.googlesyndication.com/simgad/11580188162865580943" className="video_suggestion_thumbnail_img" />
+                </div>
+                <div className="video_suggestions_About">
+                    <div className="video_suggestions_About_title">
+                    Embedded software system #Andruino #Raspberry Pi 
+                    </div>
+                    <div className="video_suggestions_About_Profile">
+                        Embedded Systems
+                    </div>
+                    <div className="video_suggestions_About_Profile">
+                        136 views. 1 day ago
+                    </div>
+                </div>
+            </div>
+            <div className="videoSuggestionsBlock">
+                <div className="video_suggestion_thumbnail">
+                    <img src="https://tpc.googlesyndication.com/simgad/11580188162865580943" className="video_suggestion_thumbnail_img" />
+                </div>
+                <div className="video_suggestions_About">
+                    <div className="video_suggestions_About_title">
+                    Embedded software system #Andruino #Raspberry Pi 
+                    </div>
+                    <div className="video_suggestions_About_Profile">
+                        Embedded Systems
+                    </div>
+                    <div className="video_suggestions_About_Profile">
+                        136 views. 1 day ago
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
   )
