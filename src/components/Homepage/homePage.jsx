@@ -1,4 +1,5 @@
 import "./homePage.css";
+import { Link } from "react-router-dom"
 
 const HomePage = ({sideNavbar}) => {
   //HOMEPAGE = FilterOptions + Video Thumbnails
@@ -29,8 +30,9 @@ const HomePage = ({sideNavbar}) => {
         })}
       </div> 
       {/* The Video Thumbnails Section*/ }
-      <div className={sideNavbar?"home_mainPage":"fullHome_mainPage"}>
-        <div className="youtube_Video"> {/* Single thumbnail*/ } 
+      <div className={sideNavbar?"home_mainPage":"fullHome_mainPage"}> {/**Toggle NavSidebar */}
+
+        <Link to={'/watch/:id'} className="youtube_Video"> {/* Single thumbnail*/ } 
             <div className="youtube_thumbnailBox">
                 <img src="https://i.ytimg.com/vi/UN-F5ZWwwJc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARTiM0ALKqtyvQkEpLUL1KEUUQAg" className="youtube_thumbnailPic" alt="Thumbnail"/>
                 <div className="youtube_timingThumbnail">
@@ -47,8 +49,9 @@ const HomePage = ({sideNavbar}) => {
                     <div className="youtubeVideo_views">24 likes</div>
                 </div>
             </div>
-        </div>
-        <div className="youtube_Video"> {/* Single thumbnail*/ } 
+        </Link>
+        
+        <Link to={'/watch/:id'} className="youtube_Video"> {/* Single thumbnail*/ } 
             <div className="youtube_thumbnailBox">
                 <img src="https://i.ytimg.com/vi/UN-F5ZWwwJc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARTiM0ALKqtyvQkEpLUL1KEUUQAg" className="youtube_thumbnailPic" alt="Thumbnail"/>
                 <div className="youtube_timingThumbnail">
@@ -65,7 +68,9 @@ const HomePage = ({sideNavbar}) => {
                     <div className="youtubeVideo_views">24 likes</div>
                 </div>
             </div>
-        </div>        <div className="youtube_Video"> {/* Single thumbnail*/ } 
+        </Link>
+
+        <Link to={'/watch/:id'} className="youtube_Video"> {/* Single thumbnail*/ } 
             <div className="youtube_thumbnailBox">
                 <img src="https://i.ytimg.com/vi/UN-F5ZWwwJc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARTiM0ALKqtyvQkEpLUL1KEUUQAg" className="youtube_thumbnailPic" alt="Thumbnail"/>
                 <div className="youtube_timingThumbnail">
@@ -82,7 +87,9 @@ const HomePage = ({sideNavbar}) => {
                     <div className="youtubeVideo_views">24 likes</div>
                 </div>
             </div>
-        </div>        <div className="youtube_Video"> {/* Single thumbnail*/ } 
+        </Link>
+
+        <Link to={'/watch/:id'} className="youtube_Video"> {/* Single thumbnail*/ } 
             <div className="youtube_thumbnailBox">
                 <img src="https://i.ytimg.com/vi/UN-F5ZWwwJc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARTiM0ALKqtyvQkEpLUL1KEUUQAg" className="youtube_thumbnailPic" alt="Thumbnail"/>
                 <div className="youtube_timingThumbnail">
@@ -99,7 +106,9 @@ const HomePage = ({sideNavbar}) => {
                     <div className="youtubeVideo_views">24 likes</div>
                 </div>
             </div>
-        </div>        <div className="youtube_Video"> {/* Single thumbnail*/ } 
+        </Link>
+
+        <Link to={'/watch/:id'} className="youtube_Video"> {/* Single thumbnail*/ } 
             <div className="youtube_thumbnailBox">
                 <img src="https://i.ytimg.com/vi/UN-F5ZWwwJc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARTiM0ALKqtyvQkEpLUL1KEUUQAg" className="youtube_thumbnailPic" alt="Thumbnail"/>
                 <div className="youtube_timingThumbnail">
@@ -116,7 +125,9 @@ const HomePage = ({sideNavbar}) => {
                     <div className="youtubeVideo_views">24 likes</div>
                 </div>
             </div>
-        </div>        <div className="youtube_Video"> {/* Single thumbnail*/ } 
+        </Link>
+
+        <Link to={'/watch/:id'} className="youtube_Video"> {/* Single thumbnail*/ } 
             <div className="youtube_thumbnailBox">
                 <img src="https://i.ytimg.com/vi/UN-F5ZWwwJc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARTiM0ALKqtyvQkEpLUL1KEUUQAg" className="youtube_thumbnailPic" alt="Thumbnail"/>
                 <div className="youtube_timingThumbnail">
@@ -133,7 +144,7 @@ const HomePage = ({sideNavbar}) => {
                     <div className="youtubeVideo_views">24 likes</div>
                 </div>
             </div>
-        </div>
+        </Link>
         
       </div>
 
