@@ -59,7 +59,9 @@ const Navbar = ( {sideNavbarOnClick, sideNavbar}) => {
             </div>
 
             <div className="navbar-right">
-                <VideoCallIcon sx={{fontSize:"30px", cursor: "pointer", color: "whitesmoke"}}/>
+                <Link to={'/:id/upload'}>
+                    <VideoCallIcon sx={{fontSize:"30px", cursor: "pointer", color: "whitesmoke"}}/>
+                </Link>
                 <NotificationsIcon sx={{fontSize:"30px", cursor: "pointer", color: "whitesmoke"}}/>
                 <img  src={DP} className="navbar-right-logo" onClick={handleClickModal}/>
                 
