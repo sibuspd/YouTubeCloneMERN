@@ -1,5 +1,5 @@
 import "./video.css"
-import { useOutletContext } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 const Video = () => {
@@ -24,9 +24,9 @@ const Video = () => {
 
                 <div className="youtube_video_ProfileBlock">
                     <div className="youtube_video_ProfileBlock_left">
-                        <div className="youtube_video_ProfileBlock_left_img">
+                        <Link to={'/user/:id'} className="youtube_video_ProfileBlock_left_img">
                             <img className="youtube_video_ProfileBlock_left_image" src="https://yt3.googleusercontent.com/nQq95AJapoab7fj3RG52TDZWXvD-KkzVtdqw6-Ch6r-cjEDAa5iGAjFrAEitPu6PBdcNzuN1Vcg=s160-c-k-c0x00ffffff-no-rj"/>
-                        </div>
+                        </Link>
                         <div className="youtubeVideo_subsView">
                             <div className="youtubePostProfileName">
                                 {"User1"}
