@@ -1,3 +1,99 @@
 .video{
+    /* background-color: skyblue; */
     margin-top: 55px;
+    display: flex;
+    padding: 30px 0;
+    justify-content: center;
+}
+
+.videoPostSection{
+    width: 100%;
+    max-width: 875px;
+    display: flex;
+    flex-direction: column;
+}
+
+.video_youtube{
+    width: 100%;
+}
+
+.video_youtube_video{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video_youtubeAbout{
+    display: flex;
+    flex-direction: column;
+}
+
+.video_uTubeTitle{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.youtube_video_ProfileBlock{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.youtube_video_ProfileBlock_left{
+    display: flex;
+    gap: 15px;
+}
+
+.youtube_video_ProfileBlock_left_img{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.youtube_video_ProfileBlock_left_image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.youtubeVideo_subsView{
+    display: flex;
+    flex-direction: column;
+}
+
+.youtubePostProfileName{
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.youtubePostProfileSubs{
+    font-size: 14px;
+    color: #5b5959;
+}
+
+.subscribeBtnYoutube{
+    background-color: black;
+    color: whitesmoke;
+    padding: 0px 16px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+
+
+
+.videoSuggestions{
+    width: 100%;
+    max-width: 406px;
+    padding: 10px 15px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
 }

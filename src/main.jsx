@@ -16,7 +16,7 @@ const appRouter = createBrowserRouter([{
       element: <Home/>
     },
     {
-      path: '/video',
+      path: '/watch/:id',
       element: <Video/>
     }
   ]

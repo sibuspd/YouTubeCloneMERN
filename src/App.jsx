@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar/navbar'
-import Home from './pages/Home/home'
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import SideNavbar from './components/SideNavbar/SideNavbar';
 
 function App() {
 
   const [sideNavbar, setSideNavbar] = useState(true);
+  
+  const location = useLocation();
+  const isHomePage = location.pathname === "/"; // React Hook
 
   const sideNavbarOnClick = (value) => {
     setSideNavbar(value); // Set to TRUE OR FALSE
@@ -16,7 +18,7 @@ function App() {
   return (
     <div className='App'>
         <Navbar sideNavbarOnClick= {sideNavbarOnClick} sideNavbar={sideNavbar}/>
-        <SideNavbar sideNavbar={sideNavbar}/> 
+        <SideNavbar sideNavbar={isHomePage?sideNavbar:false}/> 
         <Outlet context={{ sideNavbar, sideNavbarOnClick}}/>
     </div>
   )
