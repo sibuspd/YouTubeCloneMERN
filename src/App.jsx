@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar/navbar'
 import { Outlet, useLocation } from 'react-router-dom';
-import SideNavbar from './components/SideNavbar/SideNavbar';
+import SideNavbar from './components/SideNavbar/sideNavbar';
 
 function App() {
 
