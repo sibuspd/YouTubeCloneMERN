@@ -6,7 +6,7 @@ import Video from './pages/Video/video.jsx';
 import Home from './pages/Home/home.jsx';
 import Profile from './pages/Profile/profile.jsx';
 import VideoUpload from './pages/VideoUpload/videoUpload.jsx';
-import SignUp from './pages/SignUp/signup.jsx';
+import SignUp from './pages/SignUp/signUp.jsx';
 
 //Router Configuration 
 
