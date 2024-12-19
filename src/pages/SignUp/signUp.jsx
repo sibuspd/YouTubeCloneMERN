@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./signUp.css"
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import axios from "axios";
 
 const SignUp = () => {
 
@@ -11,6 +12,25 @@ const SignUp = () => {
         setSignUpField({
             ...signUpField,[name]:event.target.value
         });
+    }
+
+    const uploadImage = async (e) => { // Image upload is an Asynchronous operation
+        const files  = e.target.files; // The selected image from local machine is attached to 'files' property of event.target
+        const data = new FormData(); // 'FormData'object facilitates uploading of files as key:value pairs
+        data.append('file',files[0]) // uploaded File detail is attached here under 0th index
+        console.log(data); // 'data' becomes an HTML form type Element here
+
+        // youtubemern-clone --> Cloudinary preset
+        data.append("Upload_preset", "youtubemern-clone"); //Default user Image from Cloudinary as value
+
+        try{
+            const cloudName = "dwjbwk62x";
+            const response = await axios.post(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, data);
+            console.log(response);
+        }
+        catch(err){
+            console.log(err);
+        }
     }
 
     return (
@@ -28,7 +48,7 @@ const SignUp = () => {
                 <input type="text" className="signUp_Inputs_inp" placeholder="About Your Channel" value={signUpField.about} onChange={(e)=> handleInputField(e, "about")} />
 
                 <div className="image_upload_signup">
-                    <input type="file" />
+                    <input type="file" onChange={uploadImage}/> 
                     <div className="image_upload_signup_div">
                         <img className="image_default_signUp" src={uploadedImageUrl} />    
                     </div>   
