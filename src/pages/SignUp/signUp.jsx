@@ -6,27 +6,34 @@ import axios from "axios";
 
 const SignUp = () => {
 
-    const [signUpField, setSignUpField] = useState({ "channelName":"", "userName":"", "password":"", "about":"", "profilePic":""});
     const [uploadedImageUrl, setUploadedImageUrl] = useState("https://img.myloview.com/posters/default-avatar-profile-flat-icon-social-media-user-vector-portrait-of-unknown-a-human-image-700-209987471.jpg");
-    const handleInputField = (event, name) => {
+    const [signUpField, setSignUpField] = useState({ "channelName":"", "userName":"", "password":"", "about":"", "profilePic":uploadedImageUrl}); //profilePic will get a value in different way
+    const handleInputField = (event, name) => { // 'name' here denotes the key to be targeted
         setSignUpField({
-            ...signUpField,[name]:event.target.value
+            ...signUpField,[name]:event.target.value // overrides the value paired with key [name]
         });
     }
 
     const uploadImage = async (e) => { // Image upload is an Asynchronous operation
         const files  = e.target.files; // The selected image from local machine is attached to 'files' property of event.target
+        console.log("Image received from local machine");
         const data = new FormData(); // 'FormData'object facilitates uploading of files as key:value pairs
         data.append('file',files[0]) // uploaded File detail is attached here under 0th index
         console.log(data); // 'data' becomes an HTML form type Element here
 
         // youtubemern-clone --> Cloudinary preset
-        data.append("Upload_preset", "youtubemern-clone"); //Default user Image from Cloudinary as value
-
-        try{
+        data.append('upload_preset', 'youtubemern-clone'); //mentioning upload preset from Cloudinary as key:value pair
+        // upload_preset tells Cloudinary which preset configuration to use for this upload.
+// ----- At this stage, we have Appended the file (file) and the upload_preset to the FormData object.-----
+        
+        try{ // Executes when we select an image for uploading 
             const cloudName = "dwjbwk62x";
             const response = await axios.post(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, data);
-            console.log(response);
+            // The FormData object (which includes the file and the upload_preset) is included in the request body.
+            const imageUrl = response.data.url;
+            setUploadedImageUrl(imageUrl); //  Previews the new image obtained from cloudinary
+            setSignUpField({...signUpField,"profilePic":imageUrl}); // Updating the value under key "profilePic"
+            
         }
         catch(err){
             console.log(err);
