@@ -15,4 +15,4 @@ https://github.com/sibuspd/YouTubeCloneMERN
 
 #### Schemas Used for Backend of YouTube Cone
 
-![Schemas](./public/schemas.jpg)    
+![Schemas](../frontend/public/schemas.jpg)    

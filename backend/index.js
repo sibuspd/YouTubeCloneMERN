@@ -4,6 +4,8 @@ const app = express();
 
 const port = 4000;
 
+require('./Connection/conn');
+
 app.get("/", (req, res) => {
     res.send({
         message: "Welcome to YouTube Clone backend module"
