@@ -9,5 +9,6 @@ const UserController = require("../Controllers/userC"); // Controller has been i
 // -- Routing to RESTful API for Signup process- //
 
 router.post('/signup', UserController.signUp); //  signUp() under controller will be invoked on reaching a certain route
+router.post('/signin', UserController.signIn); // signIn() under controller will be invoked
 
 module.exports = router; // Exporting this user router module as a CJS

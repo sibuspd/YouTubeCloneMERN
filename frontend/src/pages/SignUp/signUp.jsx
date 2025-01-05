@@ -50,7 +50,7 @@ const SignUp = () => {
 
             <div className="signUp_Inputs">
                 <input type="text" className="signUp_Inputs_inp" placeholder="Channel Name" value={signUpField.channelName} onChange={(e)=> handleInputField(e, "channelName")}/>
-                <input type="text" className="signUp_Inputs_inp" placeholder="Channel Name" value={signUpField.userName} onChange={(e)=> handleInputField(e, "userName")} />
+                <input type="text" className="signUp_Inputs_inp" placeholder="Username" value={signUpField.userName} onChange={(e)=> handleInputField(e, "userName")} />
                 <input type="password" className="signUp_Inputs_inp" placeholder="Password" value={signUpField.password} onChange={(e)=> handleInputField(e, "password")} />
                 <input type="text" className="signUp_Inputs_inp" placeholder="About Your Channel" value={signUpField.about} onChange={(e)=> handleInputField(e, "about")} />
 
