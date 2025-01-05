@@ -15,4 +15,6 @@ https://github.com/sibuspd/YouTubeCloneMERN
 
 #### Schemas Used for Backend of YouTube Cone
 
-![Schemas](../frontend/public/schemas.jpg)    
+![Schemas](../frontend/public/schemas.jpg)
+
+In Routes folder, R suffix represents a route file.
