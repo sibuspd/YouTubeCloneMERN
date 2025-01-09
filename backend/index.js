@@ -12,7 +12,7 @@ require('./Connection/conn');
 // >-------- Middlewares ------------<
 app.use(express.json()); // To read JSON data received through POST method
 
-app.use(cookieParser());
+app.use(cookieParser()); // Allows us to read cookies in the Cookier header of HTTP request
 
 // >--------- Routes ----------------<
 const AuthRoutes = require("./Routes/userR"); // Authentication-based User routing

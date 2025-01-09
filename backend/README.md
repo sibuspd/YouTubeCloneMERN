@@ -209,4 +209,18 @@ For example, we have ES Lint for that.
 
 * If you’ve fixed the imports but still encounter the issue, Node.js might be using cached modules. Clear the cache or restart the server:
 
+## Importance of Cookie Parser
+
+### What cookie-parser Does?
+
+**Parses Cookies from Requests:**
+It reads cookies sent by the client in the Cookie header of the HTTP request and makes them accessible as an object on req.cookies.
+
+**Supports Signed Cookies:**
+It can validate and parse "signed" cookies, which are cookies encrypted with a secret key for added security. A signed cookie will only be accessible if it has not been tampered with.
+
+**Facilitates Cookie Management:**
+While cookie-parser is used to read cookies, it doesn't manage cookies directly. For setting cookies, you typically use res.cookie().
+
+
 

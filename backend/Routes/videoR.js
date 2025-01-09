@@ -12,5 +12,6 @@ router.post('/video', auth, videoController.uploadVideo); // Route to videoContr
 // 'auth' middleware has been sent as a 2nd parameter
 // as 'Upload video' is a registered user-based feature, 'auth' has to be called first.   
 
+router.get('/allVideo', videoController.getAllVideo); // Displaying all Videos on homepage
 
 module.exports = router; 
