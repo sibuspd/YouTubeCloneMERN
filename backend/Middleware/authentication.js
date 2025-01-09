@@ -1,16 +1,17 @@
-// Authorization Part - Keeping the User logged in 
+// Authentication Part - Keeping the User logged in through tokens
 
 const jwt = require("jsonwebtoken");
 
-const User = require("./Models/user"); // 'User' is a Mongoose model here.
+const User = require("../Models/user"); // 'User' is a Mongoose model here.
 
 // The Mongoose model is much more than a simple JSON object; it includes methods and properties for interacting with the MongoDB database.
 
 const auth = async (req, res, next) => {
+    console.log("Starting authentication middleware...");
     const token = req.cookies.token; // The token is present inside Cookie. If it doesn't exist, user has to login
     if(!token) // No token present inside Cookies / User is not logged in
         return res.status(401).json({ error: "No token. Authorization denied."});
-    else{
+    else{   
         try
         {
             const decode = jwt.verify(token, "My_Secret_Key"); // Verifies the token signature fetched from client's cookies and decodes its payload\
@@ -22,10 +23,12 @@ const auth = async (req, res, next) => {
         }
             // the req object in Express.js is quite flexible! While it's commonly used to extract information from the client's request (like headers, query parameters, body data, etc.), it can also be extended to store additional information that you might need later in the request lifecycle.
             // We are essentially storing all concerned user details in req.user except password.
-            catch(err){ // Token doesn't not match
+        catch(err){ // Token doesn't not match
+            console.error('Token verification error', err);
             res.status(401).json( { error: "Token is invalid" });
         }
     }
 }
 
+module.exports = auth ;
 

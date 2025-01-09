@@ -1,4 +1,5 @@
 var express = require("express");
+const cookieParser = require("cookie-parser");
 
 const app = express(); // app is an express module object/instance
 
@@ -11,10 +12,14 @@ require('./Connection/conn');
 // >-------- Middlewares ------------<
 app.use(express.json()); // To read JSON data received through POST method
 
+app.use(cookieParser());
+
+// >--------- Routes ----------------<
 const AuthRoutes = require("./Routes/userR"); // Authentication-based User routing
 app.use('/auth', AuthRoutes); // Authroutes is called when we reach end-point URL -/auth in 1st phase
-// >--------- Routes ----------------<
 
+const VideoRoutes = require("./Routes/videoR");
+app.use('/api', VideoRoutes);
 
 // >--------- Listen ----------------<
 app.listen(port, ()=>{

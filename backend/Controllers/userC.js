@@ -5,7 +5,7 @@
  * It interacts with the 'user' model and returns responses (JSON/ HTML) 
 */
 
-const User = require("../models/user") // Controller requires the user model to extract existing user data
+const User = require("../Models/user") // Controller requires the user model to extract existing user data
 const bcrypt = require("bcryptjs"); // Library for encrypting password
 const jwt = require("jsonwebtoken"); // Library for generating token and verifying Signatures
 

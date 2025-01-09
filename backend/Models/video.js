@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const videoSchema = new mongoose.Schema({
     user:{
-        type:mongoose.Schema.Types.ObjectId, // Object ID of any row entry
+        type:mongoose.Schema.Types.ObjectId, // Object ID of any row entry // Everytime a userId will be  referenced anyhow while viewing a video
         ref: 'user', // Reference to Collection or Model 'user'
         required:true
     },
